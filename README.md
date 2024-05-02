@@ -13,7 +13,7 @@ Ref: https://learn.microsoft.com/en-us/rest/api/computervision/analyze-image-in-
 - [Description of Endpoints](#description-of-endpoints)
 - [Example Illustration through postman](#example-illustration-through-postman)
 - [Example Illustration through Swagger](#example-illustration-through-swagger)
-- [Error Handling](#error-handling)
+- [Data Validation and Error Handling](#data-validation-and-error-handling)
 - [Possible response codes](#possible-response-codes)
 - [Summary](#summary)
   
@@ -119,7 +119,7 @@ Choose the image to be analyzed and click execute to see the result as shown bel
 <img width="1426" alt="Screenshot 2024-05-02 at 5 54 59 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/f7cd7f2a-ce8a-49cd-90e8-5e9197f1c710">
 <img width="1440" alt="Screenshot 2024-05-02 at 5 55 19 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/57867dbb-d5df-4c0d-b9f4-62ab0456662e">
 
-## Error Handling
+## Data Validation and Error Handling
 Errors are effectively handled by the code and appropriate responses are sent back. Following is an example which shows how the response looks like when an image is not sent in the body of POST request. See that the image field is unselected in the below screenshot so that it is not sent in the body.  
 
 <img width="1014" alt="Screenshot 2024-05-02 at 5 58 23 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/854d60af-4e83-4cac-bc01-e31eba084e6a">
