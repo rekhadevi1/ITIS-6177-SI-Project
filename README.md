@@ -18,63 +18,63 @@ Ref: https://learn.microsoft.com/en-us/rest/api/computervision/analyze-image-in-
 - [Summary](#summary)
   
 ## Our ImageAnalysis API Endpoints
-- http://67.205.136.244:3000/analyze/categories
-- http://67.205.136.244:3000/analyze/description
-- http://67.205.136.244:3000/analyze/tags
-- http://67.205.136.244:3000/analyze/adult
-- http://67.205.136.244:3000/analyze/faces
-- http://67.205.136.244:3000/analyze/color
-- http://67.205.136.244:3000/analyze/imagetype
-- http://67.205.136.244:3000/analyze/objects
-- http://67.205.136.244:3000/analyze/brands
-- http://67.205.136.244:3000/docs
+- http://67.205.136.244:3000/v3.1/analyze/categories
+- http://67.205.136.244:3000/v3.1/analyze/description
+- http://67.205.136.244:3000/v3.1/analyze/tags
+- http://67.205.136.244:3000/v3.1/analyze/adult
+- http://67.205.136.244:3000/v3.1/analyze/faces
+- http://67.205.136.244:3000/v3.1/analyze/color
+- http://67.205.136.244:3000/v3.1/analyze/imagetype
+- http://67.205.136.244:3000/v3.1/analyze/objects
+- http://67.205.136.244:3000/v3.1/analyze/brands
+- http://67.205.136.244:3000/v3.1/docs
 ## Description of Endpoints
-#### 1. http://67.205.136.244:3000/analyze/categories
+#### 1. http://67.205.136.244:3000/v3.1/analyze/categories
 Protocol: HTTP  
 HTTP Method: POST  
 Request Body: Image  
 Response: An array indicating identified categories in the input image.
-#### 2. http://67.205.136.244:3000/analyze/description
+#### 2. http://67.205.136.244:3000/v3.1/analyze/description
 Protocol: HTTP  
 HTTP Method: POST  
 Request Body: Image  
 Response: A collection of content tags for the input image, along with a list of captions sorted by confidence level, and image metadata.
-#### 3. http://67.205.136.244:3000/analyze/tags
+#### 3. http://67.205.136.244:3000/v3.1/analyze/tags
 Protocol: HTTP  
 HTTP Method: POST  
 Request Body: Image  
 Response: A list of tags with confidence level for the input image.
-#### 4. http://67.205.136.244:3000/analyze/adult
+#### 4. http://67.205.136.244:3000/v3.1/analyze/adult
 Protocol: HTTP  
 HTTP Method: POST  
 Request Body: Image  
 Response: An object describing whether the input image contains adult-oriented content and/or is racy.
-#### 5. http://67.205.136.244:3000/analyze/faces
+#### 5. http://67.205.136.244:3000/v3.1/analyze/faces
 Protocol: HTTP  
 HTTP Method: POST  
 Request Body: Image  
 Response: An array of possible faces within the input image.
-#### 6. http://67.205.136.244:3000/analyze/color
+#### 6. http://67.205.136.244:3000/v3.1/analyze/color
 Protocol: HTTP  
 HTTP Method: POST  
 Request Body: Image  
 Response: An object providing additional metadata describing color attributes for the input image.
-#### 7. http://67.205.136.244:3000/analyze/imagetype
+#### 7. http://67.205.136.244:3000/v3.1/analyze/imagetype
 Protocol: HTTP  
 HTTP Method: POST  
 Request Body: Image  
 Response: An object providing possible image types and matching confidence levels for the input image.
-#### 8. http://67.205.136.244:3000/analyze/objects
+#### 8. http://67.205.136.244:3000/v3.1/analyze/objects
 Protocol: HTTP  
 HTTP Method: POST  
 Request Body: Image  
 Response: Array of objects describing what was detected in the input image.
-#### 9. http://67.205.136.244:3000/analyze/brands
+#### 9. http://67.205.136.244:3000/v3.1/analyze/brands
 Protocol: HTTP  
 HTTP Method: POST  
 Request Body: Image  
 Response: Array of brands detected in the input image.
-#### 10. http://67.205.136.244:3000/docs
+#### 10. http://67.205.136.244:3000/v3.1/docs
 Protocol: HTTP  
 HTTP Method: GET   
 Response: Swagger documentation for our Image Analysis API.  
@@ -88,22 +88,25 @@ https://learn.microsoft.com/en-us/rest/api/computervision/analyze-image-in-strea
 
 ## Example Illustration through postman
 Send a POST request to one of the endpoints(1-9) mentioned above with key being word 'image' and value being the image you want to analyze in the form-data section of body. You can upload an image in POSTMAN by hovering on the Key dropdown to reveal the secret dropdown from which you can choose the file option as shown below:
-<img width="1005" alt="Screenshot 2024-05-02 at 6 21 13 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/2a9a7899-3742-4f04-88e7-9f569648f3dd">
+<img width="1012" alt="Screenshot 2024-05-03 at 10 17 26 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/ed3b8f49-729b-4e4b-bd12-c340aace9b62">
 
 
-Example for a request to the /analyze/description endpoint(2) and the response received are shown below:  
+
+Example for a request to the /v3.1/analyze/description endpoint(2) and the response received are shown below:  
   
 Sample input image:  
 
 ![1](https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/f619f34d-7926-422c-bffa-24bc968cf6e2)
 
-<img width="855" alt="Screenshot 2024-05-02 at 5 55 59 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/e764bd8b-ec3c-4a4e-8376-65ef59f68f5c">
+<img width="1015" alt="Screenshot 2024-05-03 at 10 20 04 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/c9dd9b65-d66c-4f1e-9dc7-c44f695f18b1">
+
 <img width="1019" alt="Screenshot 2024-05-02 at 5 56 32 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/d0ee602b-804c-43fa-868d-2beeae0f7777">
 
 ## Example Illustration through Swagger
-Send a GET request to /docs endpoint(10) to access the swagger documentation: 
+Send a GET request to /v3.1/docs endpoint(10) from the browser to access the swagger documentation: 
   
-<img width="1440" alt="Screenshot 2024-05-02 at 5 51 30 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/bdfa7e62-9840-4e63-8317-4d3063a96374">
+<img width="1439" alt="Screenshot 2024-05-03 at 10 21 17 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/90fb0cd3-9060-4819-83d0-828e010fff25">
+
 <img width="1438" alt="Screenshot 2024-05-02 at 5 51 41 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/549d3ec6-6e55-4bec-a0fe-5419bf513b4d">  
   
 Upon clicking the /analyze/description bar, we can see the following expanded layout:  
@@ -116,22 +119,27 @@ Click on the 'Try it out', you can see the Choose File button and Execute button
   
 Choose the image to be analyzed and click execute to see the result as shown below: 
     
-<img width="1426" alt="Screenshot 2024-05-02 at 5 54 59 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/f7cd7f2a-ce8a-49cd-90e8-5e9197f1c710">
+<img width="1405" alt="Screenshot 2024-05-03 at 10 23 47 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/485a983e-1aca-486a-b8c0-d173d9327908">
+
 <img width="1440" alt="Screenshot 2024-05-02 at 5 55 19 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/57867dbb-d5df-4c0d-b9f4-62ab0456662e">
 
 ## Data Validation and Error Handling
 Errors are effectively handled by the code and appropriate responses are sent back. Following is an example which shows how the response looks like when an image is not sent in the body of POST request. See that the image field is unselected in the below screenshot so that it is not sent in the body.  
 
-<img width="1014" alt="Screenshot 2024-05-02 at 5 58 23 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/854d60af-4e83-4cac-bc01-e31eba084e6a">
+<img width="1016" alt="Screenshot 2024-05-03 at 10 25 43 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/aa7317d6-cf81-4882-a0b6-02b56f0ebfc4">
+
 
 Same example when tried through swagger:  
 
 <img width="1413" alt="Screenshot 2024-05-02 at 5 57 54 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/ef3e3b09-6e79-42fb-9f28-678021f3fa8d">
 
-Note: Only png, jpg, jpeg files are accepted as valid input. Other file types result in 400 error with an error message as Invalid input data. Following is an example when a pdf file is uploaded:
+Note: Only png, jpg, jpeg, gif files are accepted as valid input. Other file types result in an error with an error message displayed.  
+Following is an example when a pdf file is uploaded: It throws a 400 error with a message saying Invalid input data.  
 
-<img width="1440" alt="Screenshot 2024-05-03 at 8 44 07 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/5fddc99a-7e65-407d-9169-9d3085705b66">
-<img width="1440" alt="Screenshot 2024-05-03 at 8 44 17 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/067e75e5-8e7a-4c4f-bb85-dbb41477eed0">
+<img width="1439" alt="Screenshot 2024-05-03 at 10 27 42 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/71e114fc-c836-4c67-9d22-89c6b38a96ea">
+
+<img width="1440" alt="Screenshot 2024-05-03 at 10 27 57 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/e2d35bf7-2914-4c25-8478-3f7c8b37ad54">
+
   
   
 ## Possible response codes
