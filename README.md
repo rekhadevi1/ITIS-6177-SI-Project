@@ -128,7 +128,11 @@ Same example when tried through swagger:
 
 <img width="1413" alt="Screenshot 2024-05-02 at 5 57 54 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/ef3e3b09-6e79-42fb-9f28-678021f3fa8d">
 
-Note: Only png, jpg, jpeg files are accepted as valid input. 
+Note: Only png, jpg, jpeg files are accepted as valid input. Other file types result in 400 error with an error message as Invalid input data. Following is an example when a pdf file is uploaded:
+
+<img width="1440" alt="Screenshot 2024-05-03 at 8 44 07 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/5fddc99a-7e65-407d-9169-9d3085705b66">
+<img width="1440" alt="Screenshot 2024-05-03 at 8 44 17 AM" src="https://github.com/rekhadevi1/ITIS-6177-SI-Project/assets/156479253/067e75e5-8e7a-4c4f-bb85-dbb41477eed0">
+  
   
 ## Possible response codes
 | Response Code | Description                               |
